@@ -35,6 +35,15 @@ SQL Server
 Employee Service → Redis
 Employee Service → RabbitMQ → Notification Service
 
+
+## 📸 Screenshots
+
+### WorkSphere Frontend
+![WorkSphere Frontend](frontend.png)
+
+### Docker Containers
+![Docker Containers](docker.png)
+
 🛠️ Technologies
 
 Backend: C#, .NET, ASP.NET Core Web API, Entity Framework Core
