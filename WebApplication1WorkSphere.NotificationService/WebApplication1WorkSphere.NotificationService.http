@@ -1,0 +1,6 @@
+@WebApplication1WorkSphere.NotificationService_HostAddress = http://localhost:5264
+
+GET {{WebApplication1WorkSphere.NotificationService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="../WebApplication1 WorkSphere.DepartmentService/WebApplication1 WorkSphere.DepartmentService.csproj" Id="82ce4141-fc49-42ae-87cc-696eb5e18459" />
+  <Project Path="../WebApplication1WorkSphere.NotificationService/WebApplication1WorkSphere.NotificationService.csproj" Id="b9e50932-7be3-4da9-856b-59038b41fe85" />
+  <Project Path="../WorkSphere.ApiGateway/WorkSphere.ApiGateway.csproj" Id="a9c96e40-2736-499c-916d-b72b212a9c5f" />
+  <Project Path="../WorkSphere.AuthService/WorkSphere.AuthService.csproj" Id="4cb340a3-21b1-4910-afb2-69e225e387e8" />
+  <Project Path="../WorkSphere.EmployeeService.Tests/WorkSphere.EmployeeService.Tests.csproj" Id="f6f0447b-923a-44c6-b385-412fc8f31f2d" />
+  <Project Path="../WorkSphereFrontend/WorkSphereFrontend.csproj" />
+  <Project Path="WorkSphere.EmployeeService.csproj" />
+</Solution>

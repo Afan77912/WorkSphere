@@ -1,0 +1,34 @@
+@WebApplication1_WorkSphere.DepartmentService_HostAddress = https://localhost:7235
+
+### Get all departments
+GET {{WebApplication1_WorkSphere.DepartmentService_HostAddress}}/api/Department
+Accept: application/json
+
+### Create department
+POST {{WebApplication1_WorkSphere.DepartmentService_HostAddress}}/api/Department
+Content-Type: application/json
+
+{
+  "name": "IT",
+  "description": "Information Technology Department"
+}
+
+### Get department by ID
+GET {{WebApplication1_WorkSphere.DepartmentService_HostAddress}}/api/Department/1
+Accept: application/json
+
+### Update department
+PUT {{WebApplication1_WorkSphere.DepartmentService_HostAddress}}/api/Department/1
+Content-Type: application/json
+
+{
+  "name": "Information Technology",
+  "description": "IT and Software Development Department"
+}
+
+### Delete department
+DELETE {{WebApplication1_WorkSphere.DepartmentService_HostAddress}}/api/Department/1
+
+### Verify deleted department
+GET {{WebApplication1_WorkSphere.DepartmentService_HostAddress}}/api/Department/1
+Accept: application/json

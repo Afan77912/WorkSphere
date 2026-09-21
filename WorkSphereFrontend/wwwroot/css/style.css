@@ -1,0 +1,203 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Page Header */
+
+.page-header {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+    .page-header h1 {
+        margin: 0;
+    }
+
+    .page-header p {
+        margin: 5px 0 0;
+        color: #666;
+    }
+
+
+/* Headings */
+
+h2 {
+    margin-top: 30px;
+}
+
+
+/* Employee Form */
+
+#employeeForm {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+    #employeeForm input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+        #employeeForm input:focus {
+            outline: none;
+            border-color: #555;
+        }
+
+    #employeeForm button {
+        width: fit-content;
+    }
+
+
+/* Buttons */
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+#submitButton {
+    background-color: #222;
+    color: white;
+}
+
+    #submitButton:hover {
+        opacity: 0.85;
+    }
+
+#cancelButton {
+    background-color: #ddd;
+    color: #222;
+}
+
+    #cancelButton:hover {
+        background-color: #ccc;
+    }
+
+td button:first-child {
+    background-color: #ddd;
+    color: #222;
+}
+
+    td button:first-child:hover {
+        background-color: #ccc;
+    }
+
+td button:last-child {
+    background-color: #222;
+    color: white;
+}
+
+    td button:last-child:hover {
+        opacity: 0.85;
+    }
+
+/* Employee Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+
+/* Action Buttons */
+
+td button {
+    margin-right: 5px;
+}
+
+    td button:last-child {
+        margin-right: 0;
+    }
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    #employeeForm {
+        grid-template-columns: 1fr;
+    }
+
+        #employeeForm input {
+            width: 100%;
+        }
+
+        #employeeForm button {
+            width: 100%;
+        }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+/* Action Buttons */
+
+td button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+    td button:last-child {
+        margin-right: 0;
+    }
+
+/* Toast Notification */
+
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #222;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: none;
+    z-index: 1000;
+}

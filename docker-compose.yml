@@ -1,0 +1,113 @@
+services:
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: worksphere-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "${WORKSPHERE_DB_PASSWORD}"
+    ports:
+      - "1433:1433"
+
+  redis:
+    image: redis:latest
+    container_name: worksphere-redis
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: worksphere-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  employeeservice:
+    build:
+      context: ./WorkSphere.EmployeeService
+      dockerfile: Dockerfile
+    container_name: worksphere-employee
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=WorkSphereEmployeeDb;User Id=sa;Password=${WORKSPHERE_DB_PASSWORD};TrustServerCertificate=True;"
+      RabbitMQ__Host: "rabbitmq"
+      RabbitMQ__Port: "5672"
+      RabbitMQ__Username: "guest"
+      RabbitMQ__Password: "${RABBITMQ_PASSWORD}"
+      Redis__ConnectionString: "redis:6379"
+    ports:
+      - "7206:8080"
+    depends_on:
+      - sqlserver
+      - redis
+      - rabbitmq
+
+  departmentservice:
+    build:
+      context: ./WebApplication1 WorkSphere.DepartmentService
+      dockerfile: Dockerfile.DepartmentService
+    container_name: worksphere-department
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=WorkSphereDepartmentDb;User Id=sa;Password=${WORKSPHERE_DB_PASSWORD};TrustServerCertificate=True;"
+    ports:
+      - "7235:8080"
+    depends_on:
+      - sqlserver
+
+  authservice:
+    build:
+      context: ./WorkSphere.AuthService
+      dockerfile: Dockerfile.AuthService
+    container_name: worksphere-auth
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+      Jwt__Key: "${WORKSPHERE_JWT_KEY}"
+      Jwt__Issuer: "WorkSphere.AuthService"
+      Jwt__Audience: "WorkSphere.Client"
+    ports:
+      - "7091:8080"
+
+  notificationservice:
+    build:
+      context: ./WebApplication1WorkSphere.NotificationService
+      dockerfile: Dockerfile.NotificationService
+    container_name: worksphere-notification
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+      RabbitMQ__Host: "rabbitmq"
+      RabbitMQ__Port: "5672"
+      RabbitMQ__Username: "guest"
+      RabbitMQ__Password: "${RABBITMQ_PASSWORD}"
+    depends_on:
+      - rabbitmq
+
+  apigateway:
+    build:
+      context: ./WorkSphere.ApiGateway
+      dockerfile: Dockerfile.ApiGateway
+    container_name: worksphere-gateway
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+      Jwt__Key: "${WORKSPHERE_JWT_KEY}"
+      Jwt__Issuer: "WorkSphere.AuthService"
+      Jwt__Audience: "WorkSphere.Client"
+    ports:
+      - "7151:8080"
+    depends_on:
+      - employeeservice
+      - departmentservice
+      - authservice
+
+  frontend:
+    build:
+      context: ./WorkSphereFrontend
+      dockerfile: Dockerfile.Frontend
+    container_name: worksphere-frontend
+    environment:
+      ASPNETCORE_HTTP_PORTS: "8080"
+    ports:
+      - "7060:8080"
+    depends_on:
+      - apigateway
+      - authservice
