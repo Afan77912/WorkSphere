@@ -76,6 +76,22 @@ flowchart TD
 | Frontend | HTML, CSS, JavaScript |
 | ORM | Entity Framework Core |
 
+## 🛠️ **Technologies**
+
+| Category | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | C#, .NET 10, ASP.NET Core Web API |
+| ORM | Entity Framework Core |
+| Database | SQL Server 2022 |
+| Authentication | JWT |
+| API Gateway | YARP |
+| Caching | Redis |
+| Messaging | RabbitMQ |
+| Architecture | Microservices |
+| Containerization | Docker, Docker Compose |
+| Version Control | Git, GitHub |
+
 
 📋 Prerequisites
 
