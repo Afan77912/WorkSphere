@@ -77,7 +77,7 @@ flowchart TD
 | ORM | Entity Framework Core |
 
 
-##📋 Prerequisites
+📋 Prerequisites
 
 Before running WorkSphere locally, make sure the following are installed:
 
@@ -88,7 +88,7 @@ Docker Compose v5.5.1 or later
 
 Make sure Docker Desktop is running before starting the application.
 
-##🔐 Environment Configuration
+🔐 Environment Configuration
 
 WorkSphere requires environment variables for the database, RabbitMQ, and JWT authentication.
 
@@ -102,7 +102,7 @@ Do not commit the .env file to GitHub. Keep your passwords and JWT key private.
 
 
 
-##🚀 Local Setup
+🚀 Local Setup
 1. Clone the Repository
 
 Open PowerShell or Terminal and run:
