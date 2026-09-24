@@ -61,17 +61,19 @@ flowchart TD
     Employee -->|REST API| Department
 
 
-🧩 Version Details
-Technology	Version
-.NET / ASP.NET Core	10.0.12
-SQL Server	2022
-Redis	latest
-RabbitMQ	3-management
-Docker Engine	29.7.2
-Docker Compose	v5.5.1
-API Gateway	YARP
-Frontend	HTML, CSS, JavaScript
-ORM	Entity Framework Core
+## 🧩 **Version Details**
+
+| Technology | Version |
+|---|---|
+| .NET / ASP.NET Core | 10.0.12 |
+| SQL Server | 2022 |
+| Redis | latest |
+| RabbitMQ | 3-management |
+| Docker Engine | 29.7.2 |
+| Docker Compose | v5.5.1 |
+| API Gateway | YARP |
+| Frontend | HTML, CSS, JavaScript |
+| ORM | Entity Framework Core |
 
 
 📋 Prerequisites
