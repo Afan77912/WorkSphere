@@ -93,16 +93,17 @@ flowchart TD
 | Version Control | Git, GitHub |
 
 
-📋 Prerequisites
+## 📋 **Prerequisites**
 
 Before running WorkSphere locally, make sure the following are installed:
 
-Git
-Docker Desktop
-Docker Engine 29.7.2 or later
-Docker Compose v5.5.1 or later
+- Git
+- Docker Desktop
+- Docker Engine 29.7.2 or later
+- Docker Compose v5.5.1 or later
 
 Make sure Docker Desktop is running before starting the application.
+
 
 🔐 Environment Configuration
 
