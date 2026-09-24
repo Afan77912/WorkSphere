@@ -113,7 +113,7 @@ Create a `.env` file in the root directory of the repository:
 ```env
 WORKSPHERE_DB_PASSWORD=your_secure_database_password
 RABBITMQ_PASSWORD=your_rabbitmq_password
-WORKSPHERE_JWT_KEY=your_long_secure_jwt_key
+WORKSPHERE_JWT_KEY=your_long_secure_jwt_key```
 
 
 ## 🚀 **Local Setup**
@@ -124,7 +124,7 @@ Open PowerShell or Terminal and run:
 
 ```powershell
 git clone https://github.com/Afan77912/WorkSphere.git
-cd WorkSphere
+cd WorkSphere```
 
 
 ### **2. Create the Environment File**
@@ -135,14 +135,14 @@ Create a `.env` file in the root directory of the project and add the required e
 Make sure Docker Desktop is running, then execute:
 
 ```powershell
-docker compose up --build
+docker compose up --build```
 
 ### **4. Verify Running Containers**
 
 Open a new PowerShell or Terminal window and run:
 
 ```powershell
-docker ps
+docker ps```
 
 
 ### **5. Access the Application**
