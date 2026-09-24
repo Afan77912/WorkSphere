@@ -59,6 +59,7 @@ flowchart TD
     RabbitMQ --> Notification
 
     Employee -->|REST API| Department
+```
 
 
 ## 🧩 **Version Details**
