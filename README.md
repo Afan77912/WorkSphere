@@ -113,7 +113,8 @@ Create a `.env` file in the root directory of the repository:
 ```env
 WORKSPHERE_DB_PASSWORD=your_secure_database_password
 RABBITMQ_PASSWORD=your_rabbitmq_password
-WORKSPHERE_JWT_KEY=your_long_secure_jwt_key```
+WORKSPHERE_JWT_KEY=your_long_secure_jwt_key
+```
 
 
 ## 🚀 **Local Setup**
