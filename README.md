@@ -116,54 +116,64 @@ RABBITMQ_PASSWORD=your_rabbitmq_password
 WORKSPHERE_JWT_KEY=your_long_secure_jwt_key
 
 
-🚀 Local Setup
-1. Clone the Repository
+## 🚀 **Local Setup**
+
+### **1. Clone the Repository**
 
 Open PowerShell or Terminal and run:
 
+```powershell
 git clone https://github.com/Afan77912/WorkSphere.git
 cd WorkSphere
-2. Create the Environment File
 
-Create a .env file in the root directory of the project and add the required environment variables shown above.
 
-3. Build and Start the Application
+### **2. Create the Environment File**
+Create a `.env` file in the root directory of the project and add the required environment variables shown above.
 
+
+### **3. Build and Start the Application**
 Make sure Docker Desktop is running, then execute:
 
+```powershell
 docker compose up --build
 
-Docker Compose will build and start the WorkSphere services and required infrastructure.
-
-4. Verify Running Containers
+### **4. Verify Running Containers**
 
 Open a new PowerShell or Terminal window and run:
 
+```powershell
 docker ps
 
-Make sure the WorkSphere containers are running successfully.
 
-5. Access the Application
+### **5. Access the Application**
 
 Once the containers are running, use the following URLs:
 
-Component	URL
-WorkSphere Frontend	http://localhost:7060
-API Gateway	http://localhost:7151
-Employee Service	http://localhost:7206
-Department Service	http://localhost:7235
-Auth Service	http://localhost:7091
-RabbitMQ Management	http://localhost:15672
+| Component | URL |
+|---|---|
+| WorkSphere Frontend | http://localhost:7060 |
+| API Gateway | http://localhost:7151 |
+| Employee Service | http://localhost:7206 |
+| Department Service | http://localhost:7235 |
+| Auth Service | http://localhost:7091 |
+| RabbitMQ Management | http://localhost:15672 |
 
+## 📸 **Screenshots**
 
+### **WorkSphere Frontend**
 
-📸 Screenshots
-WorkSphere Frontend
+![WorkSphere Frontend](Screenshot%202026-09-12%20000329.png)
 
-Docker Containers
+### **Docker Containers**
 
-👨‍💻 Developer
+![Docker Containers](Screenshot%202026-09-21%20222814.png)
 
-Afan Dalvi
-B.E. Computer Engineering – 2026
+### **WorkSphere Application**
+
+![WorkSphere Application](Screenshot%202026-09-21%20223552.png)
+
+## 👨‍💻 **Developer**
+
+**Afan Dalvi**  
+B.E. Computer Engineering – 2026  
 Pune, India
