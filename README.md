@@ -125,7 +125,8 @@ Open PowerShell or Terminal and run:
 
 ```powershell
 git clone https://github.com/Afan77912/WorkSphere.git
-cd WorkSphere```
+cd WorkSphere
+```
 
 
 ### **2. Create the Environment File**
@@ -136,14 +137,16 @@ Create a `.env` file in the root directory of the project and add the required e
 Make sure Docker Desktop is running, then execute:
 
 ```powershell
-docker compose up --build```
+docker compose up --build
+```
 
 ### **4. Verify Running Containers**
 
 Open a new PowerShell or Terminal window and run:
 
 ```powershell
-docker ps```
+docker ps
+```
 
 
 ### **5. Access the Application**
