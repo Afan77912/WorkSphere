@@ -104,19 +104,16 @@ Before running WorkSphere locally, make sure the following are installed:
 
 Make sure Docker Desktop is running before starting the application.
 
-
-🔐 Environment Configuration
+## 🔐 **Environment Configuration**
 
 WorkSphere requires environment variables for the database, RabbitMQ, and JWT authentication.
 
-Create a .env file in the root directory of the repository:
+Create a `.env` file in the root directory of the repository:
 
+```env
 WORKSPHERE_DB_PASSWORD=your_secure_database_password
 RABBITMQ_PASSWORD=your_rabbitmq_password
 WORKSPHERE_JWT_KEY=your_long_secure_jwt_key
-
-Do not commit the .env file to GitHub. Keep your passwords and JWT key private.
-
 
 
 🚀 Local Setup
